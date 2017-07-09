@@ -1,0 +1,22 @@
+body {
+    background: url("assets/images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-slider {
+    height: 600px !important;
+    max-width: 100%;
+}
+
+.buttonContainer {
+    align-content: center;
+}
+
+.waves-effect {
+    background: url("assets/images/first-background-image.jpg");
+    border: 1px solid white;
+    margin: 5px;
+}
