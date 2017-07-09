@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Night Out</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+<link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ </head>
+
+ <body>
+ <nav class="grey darken-1" role="navigation">
+    <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">#CrossCoders</a>
+        <ul class="right">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Logout</a></li>
+        <<li><a href="#">Sign Up</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Logout</a></li>
+        <<li><a href="#">Sign Up</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+
+<!--Main Display -->
+<div class="background">
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center red-text">Night Out</h1>
+      <div class="row center">
+        <h5 class="white-text header col s12 light">The fastest, easiest way to plan a spontaneous night out.</h5>
+      </div>
+
+      
+<!-- Modal Trigger -->      
+  <div class="row center">
+    <button data-target="modal1" class="btn modal-trigger red">Random Night</button>
+  </div>
+
+<!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Enter Your City</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row modal-form-row">
+            <div class="input-field col s6">
+              <input id="cityInput" type="text" class="validate">
+              <label for="cityInput">Location</label>
+            </div>
+          </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-action modal-close waves-effect waves-red btn-flat">Let's Go!</a>
+    </div>
+  </div>
+      <br><br>
+
+    </div>
+  </div>
+
+</div>
+
+
+      <!--   Icon Section   -->
+<div class="background">    
+      <div class="row">
+      <br><br>
+      <h4 class="header center white-text">How Does It Work?</h4>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="large material-icons">location_on</i></h2>
+            <h5 class="white-text center ">Select Your City</h5>
+
+            <p class="white-text light center">Choose the location of your next night out event. <br> Need directions?  No problem! Send directions to your phone through Google Maps.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="large material-icons">trending_up</i></h2>
+            <h5 class="white-text center">Find Trending Spots</h5>
+
+            <p class="white-text light center">What's a night out without great food &amp; drinks? <br> Check out the top 5 spots to mix and mingle, or just catch up with friends.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="large material-icons">stars</i></h2>
+            <h5 class="white-text center">Choose an Experience</h5>
+
+            <p class="white-text light center">Discover your next live experience! <br> Have a memorable event that is Snapchat worthy.</p>
+          </div>
+        </div>
+      </div>
+<br><br>
+
+</div>
+
+
+  <footer class="page-footer grey darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">We are a team of UNC Bootcamp Coders working on this project like it's our full time job.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="red-text text-lighten-3" href="https://github.com/MoHampton/NightOut">#CrossCoders</a>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+$(document).ready(function() {
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal-trigger').leanModal();
+});
+</script>
+
+</body>
+</html>
