@@ -9,43 +9,38 @@
 
 /* Testing */
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
+.background {
+  background-color: black;
 }
 
 p {
   line-height: 2rem;
 }
 
-.button-collapse {
-  color: #26a69a;
-}
-
-.parallax-container {
-  min-height: 450px;
-  line-height: 0;
-  height: auto;
-  color: ;
-}
-  .parallax-container .section {
+.container {
     width: 100%;
+    padding-left: 5px;
   }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
+.modal {
+  max-height: 25%;
+  width: 35%;
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
+#cityInput{
+  font-color: red;
+}
+
+.modal-form-row {
+  margin-bottom: 0px;
+}
+
+.modal-footer {
+  text-align: center;
+}
+.modal-footer a {
+  margin:0 15px;
+  float:none; /*if you set float already */
 }
 
 .icon-block {

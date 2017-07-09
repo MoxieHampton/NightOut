@@ -10,43 +10,83 @@
   <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
+
+
 <body>
+  
+  <!--Navigation Bar -->
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">#CrossCoders</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Log In</a></li>
         <li><a href="#">Log Out</a></li>
+        <<li><a href="#">Sign Up</a></li>
       </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Sign Up</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center red-text text-lighten-2 bold">Night Out!</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Plan the Perfect Night Out.</h5>
-        </div>
-        <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect grey darken-2 pulse">Create Your Experience</a>
-        </div>
-        <br><br>
 
+      
+      <div class="row center">
+        <button data-target="modal1" class="btn modal-trigger">Modal</button>
       </div>
+<!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
     </div>
-    <div class="parallax"><img src="bk-1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+      <br><br>
+
+    </div>
   </div>
 
+ 
 
-  <div class="container">
-    <div class="section">
+<!--City Select Modal-->
+
+<!--Modual Trigger
+ <a class="center waves-effect waves-light btn" href="#modal1">Random Night</a>
+-->
+<!--Modual Structure 
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Select Your City</h4>
+
+      <div class="row">
+        <form class="col s12">
+            <div class="input-field col s12">
+              <textarea id="cityInput" type="text" class="materialize-textarea validate"></textarea>
+              <label for="cityInput">Location</label>
+            </div>        
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class=" modal-action modal-close waves-effect waves-green btn-flat">Let's Go!</a>
+    </div>
+  </div>
+--> 
+
+<!-- Meka's Original City Input 
+<div id="cityInputForm">
+<form>
+    <input type="text" id="cityInput">
+    <button class="btn btn-outline-danger btn-lg" type="submit">Set City</button>
+</form>
+</div>
+<div id="preferredCity"></div>
+<div id="weather"></div>
+ <br>
+ <br>
+<div class="container">
+div class="section">
+-->
 
       <!--   Icon Section   -->
       <div class="row">
@@ -78,8 +118,7 @@
         </div>
       </div>
 
-    </div>
-  </div>
+
 
 
   <div class="parallax-container valign-wrapper">
@@ -90,7 +129,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="bk-3.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="assets/images/bk-3.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
@@ -115,11 +154,11 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Night Out!</h5>
         </div>
       </div>
     </div>
-    <div class="responsive-img center"><img src="bk-2.jpg" alt="Unsplashed background img 3"></div>
+    <div class="responsive-img center"><img src="assets/images/bk-2.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
   <footer class="page-footer grey darken-2">
@@ -146,9 +185,12 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="assets/js/materialize.js"></script>
-  <script src="assets/js/init.js"></script>
+<script>
+$(document).ready(function() {
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal-trigger').leanModal();
+});
+</script>
 
   </body>
 </html>
