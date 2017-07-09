@@ -16,7 +16,11 @@ body {
 }
 
 .waves-effect {
+<<<<<<< HEAD
     background: url("assets/images/first-background-image.jpg");
+=======
+    background: url("assets/images/bk-1.jpg");
+>>>>>>> 94c37b5ec467d797947d2aec5e0df51f9050fc3e
     border: 1px solid white;
     margin: 5px;
 }
