@@ -6,14 +6,18 @@
 //I want to pass that query through maps API (geocoding) to bring up a map of the area in a new div 
 //
 //
+//
+//
+//
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
 // GOOGLE MAPS GEOCODE-- 
 //AIzaSyDmZyph_0mPWdXM8yXSLT669Z_G3lttS_U
+//This function gets the info about the city/state that the user enters
+//may want to link with yelp api
 //call geocode after the form!!!
 //geocode();
-
 //get location form
 var locationForm = document.getElementById('location-form');
 
@@ -130,10 +134,10 @@ locationForm.addEventListener('submit', geocode);
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
-//TASKS TO FINISH
-
-
-
+//TASKS TO FINISH OR QUESTIONS FOR THE GROUP
+//1.  What is supposed to be displayed via map?  The city or the location of an actual event etc.? 
+//2.  Makign an ajax call via axios (different tech), it is promised-based, I assume it still counts?
+//3.  Connect Yelp API to mark businesses-- does it connect with google maps? Check if I can preset the categories from the google doc! Potentially could be markers for those top 5/10
 
 
 
@@ -144,7 +148,7 @@ locationForm.addEventListener('submit', geocode);
 ///////////////////////////////////////////////////////////////////////////////////////
 //RESOURCES
 //
-//Key Yelp 
+//YELP 
 ////Client ID
 // ImyIU6DHaqlzfq2Y-v7UPw
 // Client Secret
@@ -160,14 +164,16 @@ locationForm.addEventListener('submit', geocode);
 //explains what comes back from the response -- revese is entering Lon and Lat
 //https://youtu.be/pRiQeo17u6c
 //https://github.com/mzabriskie/axios for use with Postman account 
+//https://www.youtube.com/watch?v=Zxf1mnP5zcw
+//stopped at 12:15
+//https://developers.google.com/maps/documentation/javascript/custom-markers
+
+
 
 
 
 //API Google maps JS API
 //AIzaSyDmZyph_0mPWdXM8yXSLT669Z_G3lttS_U
-
-
-
 
 //You already have credentials that are suitable for this purpose
 // Server key (auto created by Google Service)
