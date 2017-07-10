@@ -13,18 +13,9 @@
 
 
 // GOOGLE MAPS GEOCODE-- 
+//AIzaSyDmZyph_0mPWdXM8yXSLT669Z_G3lttS_U
 
-var map = new.google.maps.Map(docuemnt.getLementById("sample"), mapoptions);
-//test code function 
-function loadMap() {
- var mapOptions = {
- 	//specificies the location where we want to center the map
- center:new google.maps.LatLng(17.240498, 82.287598),
-	 //specifies the zoom level of the map 
-	 zoom:9,
-	 //specifies the type of map -- roadmap, satellite (photographic), hybrid(phto plus roads/city names). terrain (Mts, rivers etc.)
- 	mapTypeId:google.maps.MapTypeId.ROADMAP
- };
+
 
 
 
@@ -32,8 +23,8 @@ function loadMap() {
 ////////////////////////////////////////////////////////////////////////////////////////
 
 //YELP
-var yelpapiKey =
-var yelpqueryURL = "https://api.yelp.com/v3/businesses/search"
+// var yelpapiKey =
+// var yelpqueryURL = "https://api.yelp.com/v3/businesses/search"
 // var searchQuery = 
 //
 //
@@ -48,12 +39,31 @@ var yelpqueryURL = "https://api.yelp.com/v3/businesses/search"
 // 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-
 //EVENTS AND CALLS 
+// $(document).ready(function(){
+// 	console.log("document is ready");
+// 	loadMap();
+// 	console.log("map is setting up");
+// 	var mapOptions = {
+// 		//specificies the location where we want to center the map
+// 	 	center:new google.maps.LatLng(17.240498, 82.287598),
+// 		 //specifies the zoom level of the map 
+// 		 zoom:9,
+// 		 //specifies the type of map -- roadmap, satellite (photographic), hybrid(phto plus roads/city names). terrain (Mts, rivers etc.)
+// 	 	mapTypeId: google.maps.MapTypeId.ROADMAP
+//  };
+// 	var map = new google.maps.Map(document.getElementById("mapspace"), mapOptions);
+// }
+// loadMap();
+	
+// });
 
+// $(document).ready(function(){
 
-
-
+// 	$('a').on('click', function(e){
+// 		console.log("you clicked me");
+// 	})
+// });
 
 
 
@@ -86,6 +96,14 @@ var yelpqueryURL = "https://api.yelp.com/v3/businesses/search"
 // http://en.marnoto.com/2015/06/aprende-google-maps-geocoding-exemplos.html
 // http://www.wikihow.com/Geocode-an-Address-in-Google-Maps-Javascript
 //https://hpneo.github.io/gmaps/examples/geocoding.html
+//explains what comes back from the response -- revese is entering Lon and Lat
+//https://youtu.be/pRiQeo17u6c
+//https://github.com/mzabriskie/axios for use with Postman account 
+
+
+
+//API Google maps JS API
+//AIzaSyDmZyph_0mPWdXM8yXSLT669Z_G3lttS_U
 
 
 
