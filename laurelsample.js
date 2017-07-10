@@ -66,7 +66,6 @@ locationForm.addEventListener('submit', geocode);
             var lng = response.data.results[0].geometry.location.lng;
             var geometryOutput = `<li class="list-group-item"><strong>Latitude</strong>:${lat}</li>
             <li class="list-group-item"><strong>Longitude</strong>:${lng}</li>
-
             `;
 
             //output to the mapSpace, address-components,  div
@@ -80,8 +79,136 @@ locationForm.addEventListener('submit', geocode);
         });
 
         }
+//GOOGLE MAPS ADDING MARKERS DYNAMICALLY--MINOR MARKER ISSUE STILL
+//has a parameter with callback of initmap choice!!!
+
+    function initMap(){
+        //give options for the map, zoom level, where it is supposed to be centered when the user views it too, etc.
+        //hardcoding the lat and lng but can change later to take the value from the input box
+        var options = {
+            //scale of 1(far)-14 (close?)
+            zoom: 15,
+            //be sure to put the -for lng, otherwise it puts UNC in Afganistan 
+            center: {lat:35.9132, lng:-79.0558}
+        }
+
+    //have to create the map object next, tkaes 2 parameters here,  also has to be styled or we won't see anything when it loads!!!!
+    var map = new google.maps.Map(document.getElementById('map'), options);
+        
+
+    //Listen for click on the map AND add a marker whereever that is 
+    google.maps.event.addListener(map, 'click', function(event){
+        //takes in an object and adds a marker; NOT PERSISTENT HERE
+        addMarker({coords:event.latLng});
+
+    });
+
+    // //add a SINGLE marker, it also takes in a parameter in this case 
+    // var marker = new google.maps.Marker({
+    //     position:{lat:35.9049,lng:-79.0469},
+    //     //need a value here (the map created above)
+    //     map:map,
+    //     //set up url to get to a custom icon?
+    //     // icon: 'https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png'
+    // });
+    // //can pop up text/content info-- neds a listener too
+    // var infoWindow = new google.maps.InfoWindow({
+    //     content:'<h1>UNC Chapel Hill NC</h1>'
+
+    // });
+    // marker.addListener('click',function(){
+    //     infoWindow.open(map, marker); 
+    // });
+
+    //potential for making coords object (useful if we want to add different types of markers)
+    //THIS IS A TEST-- DON'T CALL THESE 3 TIMES LIKE THIS IN FINAL VERSION!!!
+
+    //make an array of markers
+    var markers= [
+
+        {
+            //UNC 
+        coords:{lat:35.9049,lng:-79.0469}, 
+        // iconImage:'https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png'
+       content:'<h1>UNC</h1>'
+    },
+
+        {
+            //hot dog place
+        coords:{lat:35.9136, lng:-79.0555},
+        // iconImage:'https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png'
+        content: '<h1>Sup Dogs</h1>'
+
+        },
+        {
+            //top fo the hill
+        coords:{lat:35.9130, lng:-79.0553},
+        // iconImage:'https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png'
+        content:'<h1>Top of the Hill</h1>'
+        }
 
 
+    ];
+//loop through the markers 
+    for (var i=0; i<markers.lenth; i++){
+        //add marker to all the items in the array 
+     addMarker(markers[i]);    
+    
+    }
+
+    // //UNC coords
+    // addMarker({
+    //     coords:{lat:35.9049,lng:-79.0469}, 
+    //     // iconImage:'https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png'
+    //     content:'<h1>UNC</h1>'
+    // });
+    // //sup dogs coords
+    // addMarker({
+    //     coords:{lat:35.9136, lng:-79.0555},
+    //     // iconImage:'https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png'
+    //     content: '<h1>Sup Dogs</h1>'
+    // });
+    // //top of the hill coords
+    // addMarker({
+    //     coords:{lat:35.9130, lng:-79.0553},
+    //     // iconImage:'https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png'
+    //     content:'<h1>Top of the Hill</h1>'
+    // });
+    //create a function called addMarker so we can add markers dynamically
+
+    function addMarker(coords){
+        var marker = new google.maps.Marker({
+            //te props makes it a property  with the coords obj
+        position:props.coords,
+        //need a value here (the map created above)
+        map:map,
+        //set up url to get to a custom icon? and adds it as a property
+        // icon: 'https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png'
+        // icon: props.iconImage
+        });
+
+        //test to see if a parameter for a custom icon is there
+        // if(props.iconImage){
+        //     marker.setIcon(props.iconImage);
+
+        //     };
+
+        //check if content
+        if(props.content){
+                //can pop up text/content info-- neds a listener too
+            var infoWindow = new google.maps.InfoWindow({
+                content:props.content
+                 });
+
+            marker.addListener('click',function(){
+                infoWindow.open(map, marker); 
+                });
+
+            }
+
+        }
+
+    }
 
 
 
