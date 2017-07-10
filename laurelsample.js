@@ -275,12 +275,23 @@ locationForm.addEventListener('submit', geocode);
 ///////////////////////////////////////////////////////////////////////////////////////
 //RESOURCES
 //
-//YELP 
+//YELP search keys 
 ////Client ID
 // ImyIU6DHaqlzfq2Y-v7UPw
 // Client Secret
 // SOC31MI8AVBkGCnk6At0ScKs8qxdhl3CWtDfX7BF1OoTgSPBUbGONwhNb1i8Ozy1
+//https://www.youtube.com/watch?v=_nsNs43_ABk
+//https://github.com/olalonde/node-yelp
+
+//https://www.yelp.com/developers/documentation/v3/business_reviews
+//https://www.yelp.com/developers/documentation/v3/business_search
+//http://blog.rapidapi.com/2017/01/05/yelp-fusion-api-profile-pull-local-business-data/
+//https://github.com/Yelp/yelp-fusion#code-samples
+//https://www.youtube.com/watch?v=dWQ7qBahSMQ
+//https://www.youtube.com/watch?v=_nsNs43_ABk
 //
+
+
 //Key Google Maps
 //https://developers.google.com/maps/documentation/geocoding/start
 //https://developers.google.com/maps/documentation/javascript/
