@@ -15,10 +15,11 @@ body {
     align-content: center;
 }
 
-.waves-effect {
+.waves-effect,
+button {
     background: url("assets/images/bk-1.jpg");
-    border: 1px solid #d1b0b6;
-    color: #d07385;
+    border: 1px solid #d1b0b6 !important;
+    color: #d07385 !important;
     margin: 5px;
 }
 
