@@ -1,3 +1,5 @@
+/*======= Main Page Styling ============*/
+
 body {
     background: url("assets/images/first-background-image.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -30,4 +32,38 @@ button {
 .large,
 .material-icons {
     color: #d1b0b6 !important;
+}
+
+
+/*======= index3.html Styling ============*/
+
+#color {
+    background: url("assets/images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.parallax-container {
+    height: 150px;
+}
+
+#holder {
+    border: 2px solid black;
+    height: 300px;
+}
+
+#city {
+    margin: 10px;
+}
+
+#googleMaps {
+    margin: 20px;
+    border: 2px solid black;
+    height: 50px;
+}
+
+#weather {
+    margin: 10px;
 }

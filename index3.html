@@ -1,92 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Night Out</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
- </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Night Out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    <!--Main CSS Source-->
+    <link rel="stylesheet" href="project1/style.css">
+</head>
 
- <body>
- <nav class="grey darken-1" role="navigation">
-    <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">#CrossCoders</a>
-        <ul class="right">
-        <li><a href="#" id="logIn">Login</a></li>
-        <li><a href="#" id="logOut">Logout</a></li>
-        <li><a href="#" id="signUp">Sign Up</a></li>
-        </ul>
+<body>
+    <nav id="color" class="grey darken-1" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">#CrossCoders</a>
+                <ul class="right">
+                    <li><a href="#" id="logIn">Login</a></li>
+                    <li><a href="#" id="logOut">Logout</a></li>
+                    <li><a href="#" id="signUp">Sign Up</a></li>
+                </ul>
 
-        <ul id="nav-mobile" class="side-nav">
-        <li><a href="#" id="logIn">Login</a></li>
-        <li><a href="#" id="logOut">Logout</a></li>
-        <li><a href="#" id="signUp">Sign Up</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-      </div>
-    </div>
-  </nav>
-
-<!--Main Display Card-->
-  <div class="parallax-container">
-    <div class="parallax"><img src="assets/images/bk-1.jpg"></div>
-  </div>
-  <div class="section white">
-    <div class="row container">
-      <h2 class="header center">Tonight's Events</h2>
-      <div id="preferredCity"></div>
-      <div id="weather"></div>
-      <div id="yelpInput"></div>
-      <div id="eventBriteInput"></div>
-      <br>
-      <br>
-      <p class=" center grey-text text-darken-3 lighten-3">Select your events from the results below.</p>
-    </div>
-  </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="assets/images/bk-3.jpg"></div>
-  </div>
-    <div class="section white">
-      <div class="row container">
-        <h2 class="header center">Your Night Out Results</h2>
-      <div id="preferredCity"></div>
-      <div id="weather"></div>
-      <div id="yelpResult"></div>
-      <div id="eventBriteResult"></div>
-
-      <br>
-      <br>
-      <p id="results" class="grey-text text-darken-3 lighten-3"></p>
-    </div>
-
-
-  <footer class="page-footer grey darken-1">
-    <div class="container">
-      <div class="row">
-        <div class="col l12 s12">
-          <h5 class="white-text">About Us</h5>
-          <p class="grey-text text-lighten-4">We are a team of UNC Bootcamp Coders working on this project like it's our full time job.</p>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#" id="logIn">Login</a></li>
+                    <li><a href="#" id="logOut">Logout</a></li>
+                    <li><a href="#" id="signUp">Sign Up</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!----------------------------------------------------------------------------------------
+    -----------------------------User Events Display Card--------------------------------------
+    ------------------------------------------------------------------------------------------>
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/bk-1.jpg"></div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="red-text text-lighten-3" href="https://github.com/MoHampton/NightOut">#CrossCoders</a>
-      </div>
+    <div class="section white">
+        <h2 class="header center">Your Events</h2>
+        <div id="holder" class="row container">
+
+            <!------------------------------------
+            displays the city user inputs GOES HERE
+            -------------------------------------->
+            <div id="city">
+                <p id="preferredCity">Philadelphia</p>
+            </div>
+
+            <!----------------------------------------
+            displays google Maps user inpute GOES HERE
+            ------------------------------------------>
+            <div id="googleMaps"></div>
+
+            <!-------------------------------------------
+            displays Weather in city user inputs GOES HERE
+            --------------------------------------------->
+            <div id="weather">
+                <p id="preferredWeather">50 Degrees</p>
+            </div>
+
+            <br>
+            <br>
+
+            <p class=" center grey-text text-darken-3 lighten-3">Select your events from the results below.</p>
+
+            <!-------------------------------------------
+            ---------------EVENTS GO HERE----------------
+            --------------------------------------------->
+            <div id="eventOne"></div>
+            <div id="eventTwo"></div>
+            <div id="eventThree"></div>
+            <div id="eventFour"></div>
+            <div id="eventFive"></div>
+            <div id="eventSix"></div>
+            <div id="eventSeven"></div>
+            <div id="eventEight"></div>
+            <div id="eventNine"></div>
+            <div id="eventTen"></div>
+
+        </div>
     </div>
-  </footer>
+
+    <!--
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/bk-3.jpg"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header center">Your Night Out Results</h2>
+            <div id="preferredCity"></div>
+            <div id="weather"></div>
+            <div id="yelpResult"></div>
+            <div id="eventBriteResult"></div>
+
+            <br>
+            <br>
+            <p id="results" class="grey-text text-darken-3 lighten-3"></p>
+        </div>
 
 
-<script>
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-</script>
+        <footer class="page-footer grey darken-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col l12 s12">
+                        <h5 class="white-text">About Us</h5>
+                        <p class="grey-text text-lighten-4">We are a team of UNC Bootcamp Coders working on this project like it's our full time job.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Made by <a class="red-text text-lighten-3" href="https://github.com/MoHampton/NightOut">#CrossCoders</a>
+                </div>
+            </div>
+        </footer>
+-->
+
+
+    <script>
+        $(document).ready(function() {
+            $('.parallax').parallax();
+        });
+
+    </script>
 
 </body>
+
 </html>
