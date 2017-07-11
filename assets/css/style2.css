@@ -15,19 +15,12 @@ body {
     align-content: center;
 }
 
-.waves-effect,
-button {
+.waves-effect {
+<<<<<<< HEAD
+    background: url("assets/images/first-background-image.jpg");
+=======
     background: url("assets/images/bk-1.jpg");
-    border: 1px solid #d1b0b6 !important;
-    color: #d07385 !important;
+>>>>>>> 94c37b5ec467d797947d2aec5e0df51f9050fc3e
+    border: 1px solid white;
     margin: 5px;
-}
-
-.white-text {
-    color: #d07385 !important;
-}
-
-.large,
-.material-icons {
-    color: #d1b0b6 !important;
 }
