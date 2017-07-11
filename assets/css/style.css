@@ -1,55 +1,26 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-
-/* Testing */
-
-.background {
-  background-color: black;
+body {
+    background: url("assets/images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-p {
-  line-height: 2rem;
+.carousel-slider {
+    height: 600px !important;
+    max-width: 100%;
 }
 
-.container {
-    width: 100%;
-    padding-left: 5px;
-  }
-
-.modal {
-  max-height: 25%;
-  width: 35%;
+.buttonContainer {
+    align-content: center;
 }
 
-#cityInput{
-  font-color: red;
-}
-
-.modal-form-row {
-  margin-bottom: 0px;
-}
-
-.modal-footer {
-  text-align: center;
-}
-.modal-footer a {
-  margin:0 15px;
-  float:none; /*if you set float already */
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
+.waves-effect {
+<<<<<<< HEAD
+    background: url("assets/images/first-background-image.jpg");
+=======
+    background: url("assets/images/bk-1.jpg");
+>>>>>>> 94c37b5ec467d797947d2aec5e0df51f9050fc3e
+    border: 1px solid white;
+    margin: 5px;
 }
