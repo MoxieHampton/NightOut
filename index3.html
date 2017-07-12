@@ -85,26 +85,28 @@
     </div>
 
     <!--
-<div class="parallax-container">
-    <div class="parallax"><img src="assets/images/bk-3.jpg"></div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header center">Your Night Out Results</h2>
+        <div id="preferredCity"></div>
+        <div id="weather"></div>
+        <div id="yelpResult"></div>
+        <div id="eventBriteResult"></div>
+
+        <br>
+        <br>
+        <p id="results" class="grey-text text-darken-3 lighten-3"></p>
+    </div>
 </div>
 -->
 
-    <div class="section white">
-        <div class="row container">
-            <h2 class="header center">Your Night Out Results</h2>
-            <div id="preferredCity"></div>
-            <div id="weather"></div>
-            <div id="yelpResult"></div>
-            <div id="eventBriteResult"></div>
 
-            <br>
-            <br>
-            <p id="results" class="grey-text text-darken-3 lighten-3"></p>
-        </div>
+    <div class="parallax-container">
+        <div class="parallax"><img id="clipboard" src="project1/assets/images/clipboard.png"></div>
+    </div>
 
 
-        <!--
+    <!--
 <div class="container">
     <div class="row">
         <div class="col l12 s12">
@@ -116,43 +118,43 @@
 -->
 
 
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container">
-                    Made By
-                    <a class="pink-text text-lighten-4 center" href="https://github.com/MoHampton/NightOut">#CrossCoders</a>
-                </div>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                Made By
+                <a class="pink-text text-lighten-4 center" href="https://github.com/MoHampton/NightOut">#CrossCoders</a>
             </div>
-        </footer>
-
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <h4>Enter Your City</h4>
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row modal-form-row">
-                            <div class="input-field col s6">
-                                <input id="cityInput" type="text" class="validate">
-                                <label for="cityInput">Location</label>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a class="modal-action modal-close waves-effect waves-red btn-flat">Let's Go!</a>
-                </div>
-            </div>
-            <br><br>
         </div>
+    </footer>
 
-        <!-- Main JQuery source-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Compiled and minified Materialize JavaScript -->
-        <script src="project1/assets/materialize/js/materialize.min.js"></script>
-        <!-- Main Javascript Source-->
-        <script src="project1/game.js"></script>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Enter Your City</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row modal-form-row">
+                        <div class="input-field col s6">
+                            <input id="cityInput" type="text" class="validate">
+                            <label for="cityInput">Location</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect waves-red btn-flat">Let's Go!</a>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <!-- Main JQuery source-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="project1/assets/materialize/js/materialize.min.js"></script>
+    <!-- Main Javascript Source-->
+    <script src="project1/game.js"></script>
 
 </body>
 

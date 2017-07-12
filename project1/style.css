@@ -52,14 +52,10 @@ button {
     background-size: cover;
 }
 
-
-/*
-.parallax-container {
-    margin: 30px;
-    height: 250px;
-    width: 200px;
+#clipboard {
+    width: 10px;
+    height: 300px;
 }
-*/
 
 .section {
     background: url("assets/images/first-background-image.jpg")no-repeat center center fixed;
