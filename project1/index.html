@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Night Out</title>
+    <title>Night Out - How It Works</title>
     <link rel="icon" type="image/png" href="assets/images/cross-coders.png" />
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
@@ -11,38 +11,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Main CSS Source-->
     <link rel="stylesheet" href="style.css">
-    <!-- Main JQuery source-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Compiled and minified Materialize JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-
-
 </head>
 
 <body>
-
-
-    <div class="row">
-        <div class="carousel carousel-slider">
-            <a class="carousel-item" href="#one!"><img src="assets/images/bk-1-Recovered.jpg"></a>
-            <a class="carousel-item" href="#three!"><img src="assets/images/bk-1.jpg"></a>
-            <a class="carousel-item" href="#three!"><img src="assets/images/bk-2.jpg"></a>
-            <a class="carousel-item" href="#four!"><img src="assets/images/bk-3.jpg"></a>
-        </div>
-    </div>
-
-    <br>
-
-    <!-- Modal Trigger -->
-    <div class="row center">
-        <div class="buttonContainer">
-            <button class="btn modal-trigger" data-target="modal1" class="waves-effect waves-light btn-large grey" id="girlsNight">Girls Night</button>
-            <button class="btn modal-trigger" data-target="modal1" class="waves-effect waves-light btn-large grey" id="guysNight">Guys Night</button>
-            <button class="btn modal-trigger" data-target="modal1" class="waves-effect waves-light btn-large grey" id="dateNight">Date Night</button>
-            <button class="btn modal-trigger" data-target="modal1" class="waves-effect waves-light btn-large grey" id="randomNight">Random Night</button>
-        </div>
-    </div>
-
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal modal-fixed-footer">
@@ -72,6 +43,15 @@
             <h4 class="header center white-text">How Does It Work?</h4>
             <div class="col s12 m4">
                 <div class="icon-block">
+                    <h2 class="center grey-text"><i class="large material-icons">stars</i></h2>
+                    <h5 class="white-text center">Choose an Experience</h5>
+
+                    <p class="white-text light center">Discover your next live experience! <br> Have a memorable event that is Snapchat worthy.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
                     <h2 class="center grey-text"><i class="large material-icons">location_on</i></h2>
                     <h5 class="white-text center ">Select Your City</h5>
 
@@ -88,19 +68,25 @@
                 </div>
             </div>
 
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center grey-text"><i class="large material-icons">stars</i></h2>
-                    <h5 class="white-text center">Choose an Experience</h5>
-
-                    <p class="white-text light center">Discover your next live experience! <br> Have a memorable event that is Snapchat worthy.</p>
-                </div>
-            </div>
         </div>
         <br><br>
 
+        <!-- Modal Trigger -->
+        <div class="row center">
+            <div class="buttonContainer">
+                <button class="btn modal-trigger" data-target="modal1" class="waves-effect waves-light btn-large grey" id="girlsNight">Girls Night</button>
+                <button class="btn modal-trigger" data-target="modal1" class="waves-effect waves-light btn-large grey" id="guysNight">Guys Night</button>
+                <button class="btn modal-trigger" data-target="modal1" class="waves-effect waves-light btn-large grey" id="dateNight">Date Night</button>
+                <button class="btn modal-trigger" data-target="modal1" class="waves-effect waves-light btn-large grey" id="randomNight">Random Night</button>
+            </div>
+        </div>
+
     </div>
 
+    <!-- Main JQuery source-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="assets/materialize/js/materialize.min.js"></script>
     <!-- Main Javascript Source-->
     <script src="game.js"></script>
 

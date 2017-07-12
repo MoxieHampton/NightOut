@@ -1,4 +1,6 @@
-/*======= Main Page Styling ============*/
+/*=======================================================
+=================Main Page Styling ======================
+=========================================================*/
 
 body {
     background: url("assets/images/first-background-image.jpg")no-repeat center center fixed;
@@ -35,9 +37,31 @@ button {
 }
 
 
-/*======= index3.html Styling ============*/
+/*=======================================================
+=================index3.html Styling ====================
+=========================================================*/
+
+#imageNav {
+    width: 150px;
+    height: 65px;
+    margin: 0px;
+}
 
 #color {
+    background: url("assets/images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/*
+.parallax-container {
+    margin: 30px;
+    height: 250px;
+    width: 200px;
+}
+*/
+
+.section {
     background: url("assets/images/first-background-image.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -45,25 +69,42 @@ button {
     background-size: cover;
 }
 
-.parallax-container {
-    height: 150px;
+h2 {
+    color: whitesmoke !important;
 }
 
 #holder {
-    border: 2px solid black;
+    border-radius: 15px;
     height: 300px;
+    background: url("assets/images/bk-1.jpg")no-repeat center center fixed;
+    background-size: cover;
+    opacity: 1;
+    padding: 10px;
+    color: whitesmoke !important;
+    width: 100%;
 }
 
 #city {
-    margin: 10px;
+    margin: 20px;
 }
 
 #googleMaps {
     margin: 20px;
-    border: 2px solid black;
+    border: 2px solid whitesmoke;
     height: 50px;
 }
 
 #weather {
-    margin: 10px;
+    margin: 20px;
+}
+
+footer {
+    background: url("assets/images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke !important;
+    text-align: center;
+}
+
+.white-text {
+    color: whitesmoke !important;
 }

@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" type="image/png" href="project1/assets/images/cross-coders.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Night Out</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -18,7 +19,7 @@
 <body>
     <nav id="color" class="grey darken-1" role="navigation">
         <div class="container">
-            <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">#CrossCoders</a>
+            <div class="nav-wrapper"><img id="imageNav" src="project1/assets/images/bk-1-Recovered.jpg">
                 <ul class="right">
                     <li><a href="#" id="logIn">Login</a></li>
                     <li><a href="#" id="logOut">Logout</a></li>
@@ -38,11 +39,8 @@
     <!----------------------------------------------------------------------------------------
     -----------------------------User Events Display Card--------------------------------------
     ------------------------------------------------------------------------------------------>
-    <div class="parallax-container">
-        <div class="parallax"><img src="assets/images/bk-1.jpg"></div>
-    </div>
-    <div class="section white">
-        <h2 class="header center">Your Events</h2>
+
+    <div class="section black">
         <div id="holder" class="row container">
 
             <!------------------------------------
@@ -67,7 +65,7 @@
             <br>
             <br>
 
-            <p class=" center grey-text text-darken-3 lighten-3">Select your events from the results below.</p>
+            <p class=" center white-text text-darken-3 lighten-3">SELECT YOUR EVENTS FROM THE RESULTS BELOW</p>
 
             <!-------------------------------------------
             ---------------EVENTS GO HERE----------------
@@ -87,9 +85,11 @@
     </div>
 
     <!--
-    <div class="parallax-container">
-        <div class="parallax"><img src="assets/images/bk-3.jpg"></div>
-    </div>
+<div class="parallax-container">
+    <div class="parallax"><img src="assets/images/bk-3.jpg"></div>
+</div>
+-->
+
     <div class="section white">
         <div class="row container">
             <h2 class="header center">Your Night Out Results</h2>
@@ -105,29 +105,30 @@
 
 
         <footer class="page-footer grey darken-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col l12 s12">
-                        <h5 class="white-text">About Us</h5>
-                        <p class="grey-text text-lighten-4">We are a team of UNC Bootcamp Coders working on this project like it's our full time job.</p>
-                    </div>
-                </div>
-            </div>
+            <!--
+<div class="container">
+    <div class="row">
+        <div class="col l12 s12">
+            <h5 class="white-text">About Us</h5>
+            <p class="grey-text text-lighten-4">We are a team of UNC Bootcamp Coders working on this project like it's our full time job.</p>
+        </div>
+    </div>
+</div>
+-->
             <div class="footer-copyright">
                 <div class="container">
                     Made by <a class="red-text text-lighten-3" href="https://github.com/MoHampton/NightOut">#CrossCoders</a>
                 </div>
             </div>
         </footer>
--->
 
 
-    <script>
-        $(document).ready(function() {
-            $('.parallax').parallax();
-        });
+        <script>
+            $(document).ready(function() {
+                $('.parallax').parallax();
+            });
 
-    </script>
+        </script>
 
 </body>
 
