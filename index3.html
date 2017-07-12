@@ -128,25 +128,34 @@
     </footer>
 
 
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal modal-fixed-footer">
-        <div class="modal-content">
-            <h4>Enter Your City</h4>
-            <div class="row">
-                <form class="col s12">
-                    <div class="row modal-form-row">
-                        <div class="input-field col s6">
-                            <input id="cityInput" type="text" class="validate">
-                            <label for="cityInput">Location</label>
-                        </div>
-                    </div>
-                </form>
+    <!---------------------
+     ----------------------
+            Modal Login 
+     ----------------------
+     ---------------------->
+
+
+    <div id="modal1" class="modal modal-fixed-footer center">
+        <div class="content">
+            <div class="title">Create account</div>
+            <input type="text" placeholder="E-mail" />
+            <input type="password" placeholder="Password" />
+            <input type="checkbox" id="rememberMe" />
+            <label for="rememberMe"></label><span>I have read and agree to the <a href="#">Terms of Use </a>and <a href="#">Privacy Policy</a></span>
+            <button>Create Account</button>
+            <div class="social"> <span>or sign up with social media</span></div>
+            <div class="buttons">
+                <button class="facebook"><i class="fa fa-facebook"></i>Facebook</button>
+                <button class="twitter"><i class="fa fa-twitter"></i>Twitter</button>
+                <button class="google"><i class="fa fa-google-plus"></i>Google</button>
             </div>
-            <div class="modal-footer">
-                <a class="modal-action modal-close waves-effect waves-red btn-flat">Let's Go!</a>
-            </div>
+            <div class="already">Already have an account? <a href="#">Sign In</a></div>
         </div>
-        <br><br>
+        <div class="modal-footer">
+            <a class="modal-action modal-close waves-effect waves-red btn-flat">Let's Go!</a>
+        </div>
+    </div>
+    <br><br>
     </div>
 
     <!-- Main JQuery source-->

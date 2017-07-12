@@ -47,11 +47,6 @@ button {
     margin: 0px;
 }
 
-#color {
-    background: url("assets/images/holder-image.png")no-repeat center center fixed;
-    background-size: cover;
-}
-
 #clipboard {
     width: 10px;
     height: 300px;
@@ -103,4 +98,26 @@ footer {
 
 .white-text {
     color: whitesmoke !important;
+}
+
+
+/*=======================================================
+=================Modal Styling ====================
+=========================================================*/
+
+#modal1 {
+    background: url("assets/images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+.modal-footer {
+    background: url("assets/images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    position: static;
+}
+
+#modalButton {
+    margin-right: 320px;
 }
