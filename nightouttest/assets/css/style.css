@@ -1,0 +1,137 @@
+/*=======================================================
+=================Main Page Styling ======================
+=========================================================*/
+
+body {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-slider {
+    height: 600px !important;
+    max-width: 100%;
+}
+
+.buttonContainer {
+    align-content: center;
+}
+
+.waves-effect,
+button {
+    background: url("../images/bk-1.jpg");
+    border: 2px solid #d1b0b6 !important;
+    color: #d07385 !important;
+    margin: 5px;
+}
+
+.white-text {
+    color: #d07385 !important;
+}
+
+.large,
+.material-icons {
+    color: #d1b0b6 !important;
+}
+
+a{
+    color: #d07385;
+/*    color: black;*/
+}
+
+/*=======================================================
+=================index3.html Styling ====================
+=========================================================*/
+
+#imageNav {
+    width: 150px;
+    height: 65px;
+    margin: 0px;
+}
+
+#clipboard {
+    width: 10px;
+    height: 300px;
+}
+
+.section {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2 {
+    color: whitesmoke !important;
+}
+
+#holder {
+    border-radius: 15px;
+    height: 300px;
+    background: url("../images/bk-1.jpg")no-repeat center center fixed;
+    background-size: cover;
+    opacity: 1;
+    padding: 10px;
+    color: whitesmoke !important;
+    width: 100%;
+}
+
+#city {
+    margin: 20px;
+}
+
+#googleMaps {
+    margin: 20px;
+    border: 2px solid whitesmoke;
+    height: 300px;
+    width: 300px;
+}
+
+#weather {
+    margin: 20px;
+}
+
+footer {
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke !important;
+    text-align: center;
+}
+
+.white-text {
+    color: whitesmoke !important;
+}
+
+
+/*=======================================================
+=================Modal Styling ====================
+=========================================================*/
+
+#modalLocation {
+    background: url("../images/locationImage.jpeg")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+.modal-footer {
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    position: static;
+}
+
+#modalButton {
+    margin-right: 320px;
+}
+
+#modallogin{
+
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke;
+    border-radius: 15px;    
+
+}
