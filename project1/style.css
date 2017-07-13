@@ -23,7 +23,6 @@ body {
 button {
     background: url("assets/images/bk-1.jpg");
     border: 1px solid #d1b0b6 !important;
-    color: #d07385 !important;
     margin: 5px;
 }
 
@@ -40,6 +39,19 @@ button {
 /*=======================================================
 =================index3.html Styling ====================
 =========================================================*/
+
+#color {
+    background: url("assets/images/black.jpg");
+}
+
+#topRow {
+    margin-top: 30px;
+}
+
+h4 {
+    margin-bottom: 60px;
+    font-size: 80px;
+}
 
 #imageNav {
     width: 150px;
@@ -90,7 +102,7 @@ h2 {
 }
 
 footer {
-    background: url("assets/images/holder-image.png")no-repeat center center fixed;
+    background: url("assets/images/black.jpg")no-repeat center center fixed;
     background-size: cover;
     color: whitesmoke !important;
     text-align: center;
@@ -106,18 +118,22 @@ footer {
 =========================================================*/
 
 #modal1 {
-    background: url("assets/images/holder-image.png")no-repeat center center fixed;
+    background: url("assets/images/modal-background.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     color: whitesmoke;
     border-radius: 15px;
 }
 
 .modal-footer {
-    background: url("assets/images/holder-image.png")no-repeat center center fixed;
-    background-size: cover;
-    position: static;
+    background-color: solid black;
+    left: 0px;
 }
 
 #modalButton {
     margin-right: 320px;
+    background: black;
+    color: whitesmoke;
 }
