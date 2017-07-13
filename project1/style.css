@@ -76,7 +76,12 @@ h2 {
     color: whitesmoke !important;
 }
 
+#logIn {
+    background-color: black;
+}
+
 #holder {
+    border: 1px solid white;
     border-radius: 15px;
     height: 300px;
     background: url("assets/images/bk-1.jpg")no-repeat center center fixed;
@@ -85,6 +90,13 @@ h2 {
     padding: 10px;
     color: whitesmoke !important;
     width: 100%;
+}
+
+#clipboardContainer {
+    border: 1px solid white;
+    border-radius: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 #city {
