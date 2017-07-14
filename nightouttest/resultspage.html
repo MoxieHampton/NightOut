@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--results page-->
+
+<head>
+    <title>Night Out - Your Results</title>
+    <link rel="icon" type="image/png" href="assets/images/cross-coders.png" />
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <!-- Style for Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Main CSS Source-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!--information for the navigation bar-->
+    <nav id="navContainer" class="grey darken-1" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper"><img id="logo-container" href="#" src="../nightouttest/assets/images/bk-1-Recovered.jpg" class="brand-logo">
+                <ul class="right">
+                    <li><a class="btn modal-trigger" data-target="modal1" href="#" id="logIn">Login</a></li>
+                    <li><a href="#" id="logOut">LOGOUT</a></li>
+                    <li><a href="#" id="signUp">SIGN UP</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a class="btn modal-trigger" data-target="modal1" href="#" id="logIn">Login</a></li>
+                    <li><a href="#" id="logOut">Logout</a></li>
+                    <li><a href="#" id="signUp">Sign Up</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <body>
+
+        <!--User Events Display Card-->
+
+        <div class="section black">
+            <div id="holder" class="row container">
+
+                <!--displays the city user inputs GOES HERE-->
+                <div id="city">
+                    <p id="preferredCity">Philadelphia</p>
+                </div>
+
+                <!--displays Weather in city user inputs GOES HERE-->
+                <div id="weather">
+                    <p id="preferredWeather">50 Degrees</p>
+                </div>
+
+                <!--displays google Maps user inputs GOES HERE-->
+                <div id="googleMaps"></div>
+                <p class=" center white-text text-darken-3 lighten-3" style="font-size: 30px; text-shadow: 2px 2px #1d1c1c;">SELECT YOUR EVENTS FROM THE RESULTS BELOW</p>
+                <!--EVENTS GO HERE-->
+                <div class="eventContainer">
+                    <button class="eventDiv black-text" id="eventOne">1</button>
+                    <button class="eventDiv black-text" id="eventTwo">2</button>
+                    <button class="eventDiv black-text" id="eventThree">3</button>
+                    <button class="eventDiv black-text" id="eventFour">4</button>
+                    <button class="eventDiv black-text" id="eventFive">5</button>
+                    <button class="eventDiv black-text" id="eventSix">6</button>
+                    <button class="eventDiv black-text" id="eventSeven">7</button>
+                    <button class="eventDiv black-text" id="eventEight">8</button>
+                    <button class="eventDiv black-text" id="eventNine">9</button>
+                    <button class="eventDiv black-text" id="eventTen">10</button>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        <div class="parallax-container">
+            <div class="parallax"><img id="clipboard" src="assets/images/clipboard.png"></div>
+        </div>
+-->
+
+
+        <!--
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            Made By
+            <a class="pink-text text-lighten-4 center" href="https://github.com/MoHampton/NightOut">#CrossCoders</a>
+        </div>
+    </div>
+</footer>
+-->
+
+
+        <!------------------------------------------------------------------------------------
+    ----------------------------------- Modal Login --------------------------------------
+    -------------------------------------------------------------------------------------->
+
+
+        <div id="modal1" class="modal modal-fixed-footer center">
+            <div class="content">
+                <div class="title white-text" style="font-size: 60px;">Create Account</div>
+                <input id="modalEmail" type="text" placeholder="E-mail" />
+                <input id="modalPass" type="password" placeholder="Password" />
+                <br>
+                <input type="checkbox" id="rememberMe" />
+                <label for="rememberMe"></label><span class="white-text">I have read and agree to the <a href="#">Terms of Use </a>and <a href="#">Privacy Policy</a></span>
+                <br>
+                <button id="modalCreate">Create Account</button>
+                <br>
+                <br>
+                <div class="social"> <span class="white-text" style="font-size: 30px; text-shadow: 2px 2px #000;
+">Or Sign Up With Social Media</span></div>
+
+                <div class="buttons">
+                    <button id="modalFace" class="facebook"><i class="fa fa-facebook"></i>Facebook</button>
+                    <button id="modalTwit" class="twitter"><i class="fa fa-twitter"></i>Twitter</button>
+                    <button id="modalGoo" class="google"><i class="fa fa-google-plus"></i>Google</button>
+                </div>
+                <br>
+                <div class="already white-text" style="text-shadow: 2px 2px #000; font-size: 20px;">Already have an account? <a id=" modalSign " class="center " href="# ">Sign In</a></div>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect waves-red btn-flat ">Let's Go!</a>
+            </div>
+        </div>
+        <br><br>
+        </div>
+
+
+
+        <!--Firebase link-->
+        <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js "></script>
+        <!-- Main JQuery source-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+        <!-- Materialize CSS -->
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js "></script>
+        <!-- Compiled and minified Materialize JavaScript -->
+        <!--<script src="project1/assets/materialize/js/materialize.min.js "></script> -->
+        <!--     <script type="text/javascript " src="js/materialize.min.js "></script> -->
+        <!-- Main Javascript Source-->
+        <script src="javascript.js "></script>
+        <!--Firebase link-->
+        <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js "></script>
+    </body>
+
+</html>
