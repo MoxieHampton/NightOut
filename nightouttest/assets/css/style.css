@@ -43,23 +43,37 @@ body {
 
 #girlsNight {
     background: url("../images/bk-1.jpg");
+    margin: 5px;
+    border: 1px solid pink;
+    border-radius: 8px;
 }
 
 #guysNight {
     background: url("../images/bk-1.jpg");
+    margin: 5px;
+    border: 1px solid pink;
+    border-radius: 8px;
 }
 
 #dateNight {
     background: url("../images/bk-1.jpg");
+    margin: 5px;
+    border: 1px solid pink;
+    border-radius: 8px;
 }
 
 #randomNight {
     background: url("../images/bk-1.jpg");
+    margin: 5px;
+    border: 1px solid pink;
+    border-radius: 8px;
 }
 
 #modalButton {
     background: url("../images/bk-1.jpg");
     color: white;
+    border: 1px solid pink;
+    border-radius: 8px;
 }
 
 
@@ -251,4 +265,26 @@ footer {
 
 #lastContainer {
     padding: 20px;
+}
+
+#done {
+    width: 300px;
+    text-align: center;
+    margin: 5px;
+    background: url("../../../nightouttest/assets/images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#post {
+    width: 300px;
+    text-align: center;
+    margin: 5px;
+    background: url("../../../nightouttest/assets/images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
 }
