@@ -244,3 +244,11 @@ footer {
     background: url("../images/eventBackground.jpeg")no-repeat center center fixed;
     background-size: cover;
 }
+
+#clipboardImage {
+    margin-left: 220px;
+}
+
+#lastContainer {
+    padding: 20px;
+}
