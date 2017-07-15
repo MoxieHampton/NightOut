@@ -1,60 +1,315 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+/*=======================================================
+=================Main Page Styling ======================
+=========================================================*/
 
-
-/* Testing */
-
-nav ul a,
-nav .brand-logo {
-  color: #444;
+body {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-p {
-  line-height: 2rem;
+.carousel-slider {
+    height: 600px !important;
+    max-width: 100%;
 }
 
-.button-collapse {
-  color: #26a69a;
+
+/*
+.waves-effect {
+    background: url("../images/bk-1.jpg");
+    border: 2px solid #d1b0b6 !important;
+    color: #d07385 !important;
+    margin: 5px;
+}*/
+
+.white-text {
+    color: #d07385 !important;
 }
 
-.parallax-container {
-  min-height: 450px;
-  line-height: 0;
-  height: auto;
-  color: ;
+.large,
+.material-icons {
+    color: #d1b0b6 !important;
 }
-  .parallax-container .section {
+
+#girlsNightButton {
+    background: url("../images/bk-1.jpg");
+}
+
+#homePageButton {
+    color: #f5cfe0;
+}
+
+#girlsNight {
+    background: url("../images/bk-1.jpg");
+}
+
+#guysNight {
+    background: url("../images/bk-1.jpg");
+}
+
+#dateNight {
+    background: url("../images/bk-1.jpg");
+}
+
+#randomNight {
+    background: url("../images/bk-1.jpg");
+}
+
+#experienceButton {
+    background: url("../images/bk-1.jpg");
+    color: white;
+}
+
+
+/*=======================================================
+=================index3.html Styling ====================
+=========================================================*/
+
+#imageNav {
+    width: 150px;
+    height: 65px;
+    margin: 0px;
+}
+
+#clipboard {
+    width: 10px;
+    height: 300px;
+}
+
+.section {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2 {
+    color: whitesmoke !important;
+}
+
+#googleMaps {
+    margin: 20px;
+    border: 2px solid white;
+    height: 300px;
+    border-radius: 15px;
+    text-align: center;
+    background: url("../images/mapsTest.jpg");
+}
+
+footer {
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke !important;
+    text-align: center;
+}
+
+.white-text {
+    color: whitesmoke !important;
+}
+
+
+/*=======================================================
+=================Modal Styling ====================
+=========================================================*/
+
+.authModal {
+    background: url("../images/modal-background.jpg")no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+#modalEmail {
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+}
+#modalEmailSignUp {
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+}
+#modalPass {
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+}
+#modalPassSignUp {
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+}
+
+#modalCreate {
+    width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: 1px solid #f7d6dc;
+}
+
+#modalLocation {
+    
+    background-color: gray;
+    color: white;
+    border-radius: 15px;
+}
+
+#modalLocationBackground {
+    float: left;
+    position: relative;
+    left: -400px;
+    top: -130px;
+}
+
+#modalFace {
+    background-color: dodgerblue;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#modalTwit {
+    background-color: #30bfff;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#modalGoo {
+    background-color: #fc4e24;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#modalFaceSignUp {
+    background-color: dodgerblue;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#modalTwitSignUp {
+    background-color: #30bfff;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#modalGooSignUp {
+    background-color: #fc4e24;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+.modal-footer {
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    position: static;
+}
+
+
+/*=======================================================
+=================Results Page HTML ====================
+=========================================================*/
+
+#navContainer {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    background-size: cover;
+}
+
+#logo-container {
+    width: 165px;
+    height: 63px;
+}
+
+#logIn {
+    background: none !important;
+}
+
+#logInMobile {
+    background: none !important;
+}
+
+#holder {
+    background: url("../images/page3-background.jpg")no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 10px;
+    color: whitesmoke !important;
     width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
+#preferredCity {
+    text-align: center;
+    font-size: 45px;
+    text-shadow: 2px 2px #000000;
+    margin: 0px;
+    color: white;
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
+#preferredWeather {
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+    margin: 0px;
+    color: white;
 }
 
-footer.page-footer {
-  margin: 0;
+.eventContainer {
+    color: black;
+}
+
+.eventDiv {
+    border-radius: 30px;
+    width: 48%;
+    float: left;
+    text-align: center;
+    margin: 5px;
+    margin-left: 14px;
+    background: url("../images/eventBackground.jpeg") repeat center center fixed;
+    background-size: cover;
+}
+
+#lastContainer {
+    padding: 20px;
+}
+
+.eventClicked {
+    background: url("../images/pinkpurple.jpeg") repeat center center fixed;
+}
+
+.clipboardContainer {
+    font-size: 30px;
+    text-shadow: 2px 2px #000000;
+    color: white;
+    margin-top: 260px; 
+}
+
+#doneModal {
+    background: url("../images/clipboard.png") no-repeat center center fixed;
 }
