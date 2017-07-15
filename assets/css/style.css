@@ -66,8 +66,9 @@ body {
 
 
 /*=======================================================
-=================index3.html Styling ====================
+=================info.html Styling ====================
 =========================================================*/
+
 
 #imageNav {
     width: 150px;
@@ -78,7 +79,11 @@ body {
 #clipboard {
     width: 10px;
     height: 300px;
+    /*color: white;*/
 }
+
+
+
 
 .section {
     background: url("../images/first-background-image.jpg")no-repeat center center fixed;
@@ -249,14 +254,33 @@ footer {
 
 #clipboardImage {
     margin-left: 220px;
+    position: absolute;
 }
 
 #lastContainer {
     padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+
 }
 
+#clipboardContainer{
+    margin-left: 220px; 
 
+}
 
+.inner{
+    position:absolute;
+    color: white;
+    z-index: 100;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 620px;
+    margin-top: 260px;
+}
 
 
 
@@ -273,13 +297,16 @@ footer {
     -o-background-size: cover;
     background-size: cover;
 }
+
 .carousel-slider {
     height: 600px !important;
     max-width: 100%;
 }
+
 .buttonContainer {
     align-content: center;
 }
+
 .waves-effect,
 button {
     background: url("../images/bk-1.jpg");
@@ -287,15 +314,19 @@ button {
     color: #d07385 !important;
     margin: 5px;
 }
+
 .white-text {
     color: #d07385 !important;
 }
+
 .large,
 .material-icons {
     color: #d1b0b6 !important;
 }
+
 a{
     color: #d07385;
+
 }
 */
 /*=======================================================
@@ -307,10 +338,12 @@ a{
     height: 65px;
     margin: 0px;
 }
+
 #clipboard {
     width: 10px;
     height: 300px;
 }
+
 .section {
     background: url("../images/first-background-image.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -318,9 +351,11 @@ a{
     -o-background-size: cover;
     background-size: cover;
 }
+
 h2 {
     color: whitesmoke !important;
 }
+
 #holder {
     border-radius: 15px;
     height: 300px;
@@ -331,24 +366,29 @@ h2 {
     color: whitesmoke !important;
     width: 100%;
 }
+
 #city {
     margin: 20px;
 }
+
 #googleMaps {
     margin: 20px;
     border: 2px solid whitesmoke;
     height: 300px;
     width: 300px;
 }
+
 #weather {
     margin: 20px;
 }
+
 footer {
     background: url("../images/holder-image.png")no-repeat center center fixed;
     background-size: cover;
     color: whitesmoke !important;
     text-align: center;
 }
+
 .white-text {
     color: whitesmoke !important;
 }
@@ -364,17 +404,22 @@ footer {
     color: whitesmoke;
     border-radius: 15px;
 }
+
 .modal-footer {
     background: url("../images/holder-image.png")no-repeat center center fixed;
     background-size: cover;
     position: static;
 }
+
 #modalButton {
     margin-right: 320px;
 }
+
 #modallogin{
+
     background: url("../images/holder-image.png")no-repeat center center fixed;
     background-size: cover;
     color: whitesmoke;
     border-radius: 15px;    
+
 }*/

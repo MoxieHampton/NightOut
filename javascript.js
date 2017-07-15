@@ -40,6 +40,7 @@ var userLong = "";
 var firebaseUser;
 var map;
 
+
 //api.openweathermap.org/data/2.5/weather?q={city name}
 
 firebase.initializeApp(config);
@@ -93,7 +94,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 // });
 
 //captures the userCity information from the let's go button to pass through the weather api
-
 $("#modalButton").click(function(){
     event.preventDefault();
     //make a new variable called usercity based on the the trimmed value of the "city input" box
@@ -102,17 +102,21 @@ $("#modalButton").click(function(){
     console.log(userCity);
     //run the function Print user city to print the city in the preferred city div
     printUserCity();
+    // //what is firebase doing here? 
+    // if(firebaseUser != undefined) {
 
-    if(firebaseUser != undefined) {
+    //     database.ref("users/" + firebaseUser.uid).set({
+    //         city: userCity
+    //     })
+    // }
 
-        database.ref("users/" + firebaseUser.uid).set({
-            city: userCity
-        })
-    }
+//after grabbing the city and state, passes it through the city name
+    // weatherQuery(userCity);
+    console.log(userCity);
 
-});
+    });
 
-
+//////////all button functions////////////
 // eventbrite button will show events in selected cities when button is clicked
 $("#eventBriteButton").click(function(){
     var token = "R6QQVF4RQTZXWE5XVPC5";
@@ -125,10 +129,10 @@ $("#eventBriteButton").click(function(){
     }).done(function(data){
         console.log(data);
         //empty the eventBrite results div  
-        $("#eventBriteResults").empty();
+        $("#allResults").empty();
         for (var i = 0; i < data.events.length; i++) {
-            var newDiv=`<div>${data.events[i].name.html}</div>`
-            $("#eventBriteResults").append(newDiv);
+            var newDiv=`<div>${data.events[i].name.text}</div>`;
+            $("#allResults").append(newDiv);
         }
     });
 });
@@ -147,85 +151,88 @@ $("#fourSquareFoodButton").click(function(){
          url: queryURL
     })
     .done(function(data){
-        console.log(data);
+        //console.log(data);
+        //console.log(data.response.groups[0].items[i].length);
+        //EMPTY THE FOURSQUARE RESULTS DIV and add new  info from foursqaure
+        $("#allResults").empty();
+        for (var i = 0; i < data.response.groups[0].items.length; i++) {
+            //console.log(data.response.groups[0].items[i].venue.name);
+            var newDiv=`<div>${data.response.groups[0].items[i].venue.name}</div>`;
+             $("#allResults").append(newDiv);
+        }
     });
+
 });
 
-//sets up the push of fourSquareFood content to the user
-// $("fourSquareFood").innerHTML();
 
-$("#fourSquareTrendingButton").click(function(){
+// $("#fourSquareTrendingButton").click(function(){
 
-    var clientId = "E2ASPJ0FPTMTQUB1RGYFICEWYIGTT2NG3CJXTREL4WXGQVZO";
-    var clientSecret = "EHEV5ED4QETVAL5QAS3EEKGBXZELL5QVG5XAPWQJY2R11HFO";
+//     var clientId = "E2ASPJ0FPTMTQUB1RGYFICEWYIGTT2NG3CJXTREL4WXGQVZO";
+//     var clientSecret = "EHEV5ED4QETVAL5QAS3EEKGBXZELL5QVG5XAPWQJY2R11HFO";
 
-    var location = encodeURIComponent(userCity);
+//     var location = encodeURIComponent(userCity);
 
-    var queryURL = `https://api.foursquare.com/v2/venues/explore?v=20170101&client_id=${clientId}&client_secret=${clientSecret}&near=${location}&intent=browse&section=trending`;
+//     var queryURL = `https://api.foursquare.com/v2/venues/explore?v=20170101&client_id=${clientId}&client_secret=${clientSecret}&near=${location}&intent=browse&section=trending`;
 
-    console.log(queryURL);
-    $.ajax({
-         url: queryURL
-    })
-    .done(function(data){
-        console.log(data);
-    });
-});
+//     console.log(queryURL);
+//     $.ajax({
+//          url: queryURL
+//     })
+//     .done(function(data){
+//         console.log(data);
+//     });
+// });
 
-function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-    });
+// function createMarker(place) {
+//     var placeLoc = place.geometry.location;
+//     var marker = new google.maps.Marker({
+//         map: map,
+//         position: place.geometry.location
+//     });
 
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
-    });
-}
+//     google.maps.event.addListener(marker, 'click', function() {
+//         infowindow.setContent(place.name);
+//         infowindow.open(map, this);
+//     });
+// }
 
-//sets up the push of fourSquareTrends content to the user
-// $("fourSquareTrends").innerHTML() = ;
+// $("#googlePlacesButton").click(function(){
 
+//     var geocoder = new google.maps.Geocoder();
+//     geocoder.geocode( { 'address': userCity}, function(results, status) {
+//       if (status == 'OK') {
+//         console.log(results);
+//         userLat = results["0"].geometry.location.lat();
+//         userLong = results["0"].geometry.location.lng();
 
-$("#googlePlacesButton").click(function(){
+//         var pyrmont = new google.maps.LatLng(userLat,userLong);
+//         var request = {
+//             location: pyrmont,
+//             radius: '500',
+//             type: ['restaurant']
+//         };
+//         map = new google.maps.Map(document.getElementById('map'), {
+//             center: results["0"].geometry.location,
+//             zoom: 15
+//         });
+//         var service = new google.maps.places.PlacesService(map);
+//         service.nearbySearch(request, function(results, status) {
+//             console.log(results);
+//             $("#googleResults").empty();
+//             if (status === google.maps.places.PlacesServiceStatus.OK) {
+//                 for (var i = 0; i < results.length && i < 5; i++) {
+//                     createMarker(results[i]);
+//                     var newDiv=`<div>${results[i].name}</div>`
+//                     $("#googleResults").append(newDiv);
+//                 }
+//             }
+//         });
+//       }
+//       else {
 
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode( { 'address': userCity}, function(results, status) {
-      if (status == 'OK') {
-        console.log(results);
-        userLat = results["0"].geometry.location.lat();
-        userLong = results["0"].geometry.location.lng();
-
-        var pyrmont = new google.maps.LatLng(userLat,userLong);
-        var request = {
-            location: pyrmont,
-            radius: '500',
-            type: ['restaurant']
-        };
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: results["0"].geometry.location,
-            zoom: 15
-        });
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch(request, function(results, status) {
-            console.log(results);
-            $("#googleResults").empty();
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                for (var i = 0; i < results.length && i < 5; i++) {
-                    createMarker(results[i]);
-                    var newDiv=`<div>${results[i].name}</div>`
-                    $("#googleResults").append(newDiv);
-                }
-            }
-        });
-      }
-      else {
-
-      }
-    });
-});
+//       }
+//     });
+// });
 
 //event for clicking the sign-up link on the nav menu-- for now the a hrefs are # placeholders, call modal?
 $("#signUpButton").click(function(){
@@ -325,25 +332,41 @@ $("#signInGoogle").click(function(){
     });
 });
 
- 
+//  //updated weather api function 
+// function weatherQuery()
+// {
+//    var queryURL = `https://api.apixu.com/v1/current.json?key=fabc133684694665aae31230171407&q=${encodeURIComponent(userCity)}`;
+//    $.ajax({
+//        url: queryURL
+//    })
+//    .done(function(data){
+//        //console.log(data);
+//        $("#preferredWeather").html(`${data.current.temp_f} Degrees ${data.current.condition.text}`);
+//    })
+//    .fail(function(jqXHR, textStatus)
+//    {
+//        console.log(textStatus);
+//    })
+// }
 
-//updated weather api function 
-function weatherQuery()
-{
-   var queryURL = `https://api.apixu.com/v1/current.json?key=fabc133684694665aae31230171407&q=${encodeURIComponent(userCity)}`;
-   $.ajax({
-       url: queryURL
-   })
-   .done(function(data){
-       //console.log(data);
-       $("#preferredWeather").html(`${data.current.temp_f} Degrees ${data.current.condition.text}`);
-   })
-   .fail(function(jqXHR, textStatus)
-   {
-       console.log(textStatus);
-   })
-}
-
+ //updated weather api function based on auto ip
+// function weatherQuery()
+// {
+//    // var queryURL = `https://api.apixu.com/v1/current.json?key=fabc133684694665aae31230171407&q=${encodeURIComponent(userCity)}`;
+//    // var queryURL = `https://api.apixu.com/v1/current.json?key=fabc133684694665aae31230171407&q=auto:ip`;
+// var queryURL = `https://api.apixu.com/v1/current.json?key=fabc133684694665aae31230171407&q=${userCity}`;
+//    $.ajax({
+//        url: queryURL
+//    })
+//    .done(function(data){
+//        //console.log(data);
+//        $("#preferredWeather").html(`${data.current.temp_f} Degrees ${data.current.condition.text}`);
+//    })
+//    .fail(function(jqXHR, textStatus)
+//    {
+//        console.log(textStatus);
+//    })
+// }
 
 //this API only uses http, it will be BLOCKED by chrome 
 // $("#weatherButton").click(function(){
