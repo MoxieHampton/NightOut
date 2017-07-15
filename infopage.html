@@ -75,10 +75,10 @@
         <!-- Modal Trigger -->
         <div class="row center">
             <div class="buttonContainer">
-                <button class="btn modal-trigger" data-target="modalLocation" class="waves-effect waves-light btn-large grey" id="girlsNight">Girls Night</button>
-                <button class="btn modal-trigger" data-target="modalLocation" class="waves-effect waves-light btn-large grey" id="guysNight">Guys Night</button>
-                <button class="btn modal-trigger" data-target="modalLocation" class="waves-effect waves-light btn-large grey" id="dateNight">Date Night</button>
-                <button class="btn modal-trigger" data-target="modalLocation" class="waves-effect waves-light btn-large grey" id="randomNight">Random Night</button>
+                <!-- <button class="btn modal-trigger" data-target="modalLocation" class="waves-effect waves-light btn-large grey" id="girlsNight">Girls Night</button> -->
+                <button class="btn modal-trigger" data-target="modalLocation" class="waves-effect waves-light btn-large grey" id="guysNight">Where Do You Want To Hang?</button>
+                <!-- <button class="btn modal-trigger" data-target="modalLocation" class="waves-effect waves-light btn-large grey" id="dateNight">Date Night</button>
+                <button class="btn modal-trigger" data-target="modalLocation" class="waves-effect waves-light btn-large grey" id="randomNight">Random Night</button> -->
             </div>
         </div>
 
@@ -105,9 +105,7 @@
 
                         </div>
                     </form>
-                </div>
-
-             
+                </div>            
 
                 <!--  </div> -->
             </div>
@@ -121,30 +119,34 @@
 
                 <!--displays the city user inputs GOES HERE-->
                 <div id="city">
-                    <p id="preferredCity">Philadelphia</p>
+                    <p id="preferredCity">Your Location</p>
                 </div>
 
                 <!--displays Weather in city user inputs GOES HERE-->
-                <div id="weather">
+               <!--  <div id="weather">
                     <p id="preferredWeather">50 Degrees</p>
-                </div>
+                </div> -->
 
                 <!--displays google Maps user inputs GOES HERE-->
-                <div id="googleMaps"></div>
+                <div id="googleResults">
+                        <div id="map">
+
+                        </div>
+                </div>
                 <p class=" center white-text text-darken-3 lighten-3" style="font-size: 30px; text-shadow: 2px 2px #1d1c1c;">SELECT YOUR EVENTS FROM THE RESULTS BELOW</p>
         
-         <!--CLIPBOARD EVENTS GO HERE-->
+         <!--CLIPBOARD EVENT BUTTONS GO HERE-->
                 <div class="eventContainer">
-                    <button class="eventDiv black-text" id="eventOne">1</button>
-                    <button class="eventDiv black-text" id="eventTwo">2</button>
-                    <button class="eventDiv black-text" id="eventThree">3</button>
-                    <button class="eventDiv black-text" id="eventFour">4</button>
-                    <button class="eventDiv black-text" id="eventFive">5</button>
+                   <!--  <button class="eventDiv black-text" id="googlePlacesButton">Show Me Places </button> -->
+                    <button class="eventDiv black-text" id="eventBriteButton">What to Do</button>
+                    <button class="eventDiv black-text" id="fourSquareFoodButton">What to Eat</button>
+                   <!--  <button class="eventDiv black-text" id="fourSquareTrendingButton">Show Me Trending</button> -->
+                    <!-- <button class="eventDiv black-text" id="eventFive">5</button>
                     <button class="eventDiv black-text" id="eventSix">6</button>
                     <button class="eventDiv black-text" id="eventSeven">7</button>
                     <button class="eventDiv black-text" id="eventEight">8</button>
                     <button class="eventDiv black-text" id="eventNine">9</button>
-                    <button class="eventDiv black-text" id="eventTen">10</button>
+                    <button class="eventDiv black-text" id="eventTen">10</button> -->
                 </div>
             </div>
         </div>
@@ -182,35 +184,28 @@
                 <br>
                 <div class="already white-text" style="text-shadow: 2px 2px #000; font-size: 20px;">Already have an account? <a id=" modalSign " class="center " href="# ">Sign In</a></div>
             </div>
-
-            <!-----------------
-            YO LAUREL CHECK HERE xd FIXED IT! 
-            -------------------->
+  
             <!-- <div class="modal-footer"> -->
                 <a class="modal-action modal-close waves-effect waves-red btn-flat ">Let's Go!</a>
-         <!--    </div> -->
+         <!--  </div> -->
         </div>
         <br><br>
         </div>
 
-        <!-----------------
-        BLANK Clipboard Divs
-        -------------------->
+        <!--RESULTING BLANK Clipboard Divs-->
         <div class="clipboardContainer">
             <img id="clipboardImage" src="assets/images/clipboard.png">
-            <div id=""></div>
-            <div id=""></div>
-            <div id=""></div>
-            <div id=""></div>
+<!--             <div id="" class="inner"></div>
+            <div id="" class="inner"></div> -->
+            <div id="allResults" class="inner"></div>
+          <!--   <div id="fourSquareResults" class="inner"></div> -->
         </div>
-
-        <!-----------------
-            YO BUTTONS
-        -------------------->
-        <div id="lastContainer" class="center">
-            <button id="done">DONE</button>
-            <button id="post">POST</button>
-        </div>
+        
+        <!--YO BUTTONS-->
+<!--         <div id="lastContainer" class="center">
+            <button class="btn waves-effect waves-light" id="done" type="submit" name="action">DONE</button>
+            <button class="btn waves-effect waves-light" id="post" type="submit" name="action">POST</button>
+        </div> -->
 
     </div>
      <!--Firebase link-->
