@@ -1,0 +1,380 @@
+/***************updated 7/14*************/
+
+/*=======================================================
+=================Main Page Styling ======================
+=========================================================*/
+
+body {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-slider {
+    height: 600px !important;
+    max-width: 100%;
+}
+
+
+/*
+.waves-effect {
+    background: url("../images/bk-1.jpg");
+    border: 2px solid #d1b0b6 !important;
+    color: #d07385 !important;
+    margin: 5px;
+}*/
+
+.white-text {
+    color: #d07385 !important;
+}
+
+.large,
+.material-icons {
+    color: #d1b0b6 !important;
+}
+
+#girlsNightButton {
+    background: url("../images/bk-1.jpg");
+}
+
+#homePageButton {
+    color: #f5cfe0;
+}
+
+#girlsNight {
+    background: url("../images/bk-1.jpg");
+}
+
+#guysNight {
+    background: url("../images/bk-1.jpg");
+}
+
+#dateNight {
+    background: url("../images/bk-1.jpg");
+}
+
+#randomNight {
+    background: url("../images/bk-1.jpg");
+}
+
+#modalButton {
+    background: url("../images/bk-1.jpg");
+    color: white;
+}
+
+
+/*=======================================================
+=================index3.html Styling ====================
+=========================================================*/
+
+#imageNav {
+    width: 150px;
+    height: 65px;
+    margin: 0px;
+}
+
+#clipboard {
+    width: 10px;
+    height: 300px;
+}
+
+.section {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2 {
+    color: whitesmoke !important;
+}
+
+#googleMaps {
+    margin: 20px;
+    border: 2px solid white;
+    height: 300px;
+    border-radius: 15px;
+    text-align: center;
+    background: url("../images/mapsTest.jpg");
+}
+
+footer {
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke !important;
+    text-align: center;
+}
+
+.white-text {
+    color: whitesmoke !important;
+}
+
+
+/*=======================================================
+=================Modal Styling ====================
+=========================================================*/
+
+#modal1 {
+    /*background: url("../assets/images/modal-background.jpg")no-repeat center center fixed;*/
+    background-size: cover;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+#modalEmail {
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+}
+
+#modalPass {
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+}
+
+#modalCreate {
+    width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: 1px solid #f7d6dc;
+}
+
+#modalLocation {
+    background: url("../images/locationImage.jpeg")no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    border-radius: 15px;
+}
+
+#modalFace {
+    background-color: dodgerblue;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#modalTwit {
+    background-color: #30bfff;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#modalGoo {
+    background-color: #fc4e24;
+    width: 220px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+.modal-footer {
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    position: static;
+}
+
+
+/*=======================================================
+=================Results Page HTML ====================
+=========================================================*/
+
+#navContainer {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    background-size: cover;
+}
+
+#logo-container {
+    width: 165px;
+    height: 63px;
+}
+
+#logIn {
+    background: none !important;
+}
+
+#holder {
+    background: url("../images/page3-background.jpg")no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 10px;
+    color: whitesmoke !important;
+    width: 100%;
+}
+
+#preferredCity {
+    text-align: center;
+    font-size: 45px;
+    text-shadow: 2px 2px #000000;
+    margin: 0px;
+    color: white;
+}
+
+#preferredWeather {
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+    margin: 0px;
+    color: white;
+}
+
+.eventContainer {
+    color: black;
+}
+
+.eventDiv {
+    border-radius: 30px;
+    width: 48%;
+    float: left;
+    text-align: center;
+    margin: 5px;
+    margin-left: 14px;
+    background: url("../images/eventBackground.jpeg")no-repeat center center fixed;
+    background-size: cover;
+}
+
+#clipboardImage {
+    margin-left: 220px;
+}
+
+#lastContainer {
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+/*=======================================================
+=================Main Page Styling ======================
+=========================================================*/
+
+/*body {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.carousel-slider {
+    height: 600px !important;
+    max-width: 100%;
+}
+.buttonContainer {
+    align-content: center;
+}
+.waves-effect,
+button {
+    background: url("../images/bk-1.jpg");
+    border: 2px solid #d1b0b6 !important;
+    color: #d07385 !important;
+    margin: 5px;
+}
+.white-text {
+    color: #d07385 !important;
+}
+.large,
+.material-icons {
+    color: #d1b0b6 !important;
+}
+a{
+    color: #d07385;
+}
+*/
+/*=======================================================
+=================index3.html Styling ====================
+=========================================================*/
+/*
+#imageNav {
+    width: 150px;
+    height: 65px;
+    margin: 0px;
+}
+#clipboard {
+    width: 10px;
+    height: 300px;
+}
+.section {
+    background: url("../images/first-background-image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h2 {
+    color: whitesmoke !important;
+}
+#holder {
+    border-radius: 15px;
+    height: 300px;
+    background: url("../images/bk-1.jpg")no-repeat center center fixed;
+    background-size: cover;
+    opacity: 1;
+    padding: 10px;
+    color: whitesmoke !important;
+    width: 100%;
+}
+#city {
+    margin: 20px;
+}
+#googleMaps {
+    margin: 20px;
+    border: 2px solid whitesmoke;
+    height: 300px;
+    width: 300px;
+}
+#weather {
+    margin: 20px;
+}
+footer {
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke !important;
+    text-align: center;
+}
+.white-text {
+    color: whitesmoke !important;
+}
+*/
+
+/*=======================================================
+=================Modal Styling ====================
+=========================================================*/
+
+/*#modalLocation {
+    background: url("../images/locationImage.jpeg")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+.modal-footer {
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    position: static;
+}
+#modalButton {
+    margin-right: 320px;
+}
+#modallogin{
+    background: url("../images/holder-image.png")no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke;
+    border-radius: 15px;    
+}*/

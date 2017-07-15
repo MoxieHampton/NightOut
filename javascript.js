@@ -1,11 +1,11 @@
 //This is the final javascript page for the NIGHTOUT application 
+//triggers the carousel function on the landing page 
 
-//triggers the carousel function 
+//controls the carousel on the landing page/index
 $(document).ready(function () {
 
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
-
 
     //timer for the carousel
     $('.carousel').carousel({
@@ -17,13 +17,9 @@ $(document).ready(function () {
         $('.carousel').carousel('next');
         setTimeout(autoplay, 3500);
     }
-
-
     $('.parallax').parallax();
 
-
 });
-
 
 //firebase config with key
 
@@ -55,7 +51,7 @@ function printUserCity() {
     $("#preferredCity").html("City: " + userCity);
     $("#weather").html("");
 }
-
+//firebase call with this 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -82,6 +78,41 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
+
+//This call captures the city and state value from the location modal
+// $("#cityInputForm").submit(function(){
+//     event.preventDefault();
+//     userCity = $("#cityInput").val().trim();
+//     printUserCity();
+
+//     if (firebaseUser != undefined) {
+//         database.ref("users/" + firebaseUser.uid).set({
+//             city: userCity
+//         });
+//     }
+// });
+
+//captures the userCity information from the let's go button to pass through the weather api
+
+$("#modalButton").click(function(){
+    event.preventDefault();
+    //make a new variable called usercity based on the the trimmed value of the "city input" box
+    userCity = $("#cityInput").val().trim();
+    //see what the value logged is
+    console.log(userCity);
+    //run the function Print user city to print the city in the preferred city div
+    printUserCity();
+
+    if(firebaseUser != undefined) {
+
+        database.ref("users/" + firebaseUser.uid).set({
+            city: userCity
+        })
+    }
+
+});
+
+
 // eventbrite button will show events in selected cities when button is clicked
 $("#eventBriteButton").click(function(){
     var token = "R6QQVF4RQTZXWE5XVPC5";
@@ -93,6 +124,7 @@ $("#eventBriteButton").click(function(){
         method: "GET"
     }).done(function(data){
         console.log(data);
+        //empty the eventBrite results div  
         $("#eventBriteResults").empty();
         for (var i = 0; i < data.events.length; i++) {
             var newDiv=`<div>${data.events[i].name.html}</div>`
@@ -102,18 +134,12 @@ $("#eventBriteButton").click(function(){
 });
 
 
-
-// $("#zomatoButton").click(function(){
-// //f7e75efc205df5df23b8ffa670aa0e7c
-// });
-
 $("#fourSquareFoodButton").click(function(){
     var clientId = "E2ASPJ0FPTMTQUB1RGYFICEWYIGTT2NG3CJXTREL4WXGQVZO";
     var clientSecret = "EHEV5ED4QETVAL5QAS3EEKGBXZELL5QVG5XAPWQJY2R11HFO";
 
     var location = encodeURIComponent(userCity);
-    //can update this with other elements 
-    //for exmaple change the part below for the button for girls night to drinks instead of food
+
     var queryURL = `https://api.foursquare.com/v2/venues/explore?v=20170101&client_id=${clientId}&client_secret=${clientSecret}&near=${location}&intent=browse&section=food`;
 
     console.log(queryURL);
@@ -125,7 +151,11 @@ $("#fourSquareFoodButton").click(function(){
     });
 });
 
+//sets up the push of fourSquareFood content to the user
+// $("fourSquareFood").innerHTML();
+
 $("#fourSquareTrendingButton").click(function(){
+
     var clientId = "E2ASPJ0FPTMTQUB1RGYFICEWYIGTT2NG3CJXTREL4WXGQVZO";
     var clientSecret = "EHEV5ED4QETVAL5QAS3EEKGBXZELL5QVG5XAPWQJY2R11HFO";
 
@@ -155,6 +185,10 @@ function createMarker(place) {
     });
 }
 
+//sets up the push of fourSquareTrends content to the user
+// $("fourSquareTrends").innerHTML() = ;
+
+
 $("#googlePlacesButton").click(function(){
 
     var geocoder = new google.maps.Geocoder();
@@ -178,7 +212,6 @@ $("#googlePlacesButton").click(function(){
         service.nearbySearch(request, function(results, status) {
             console.log(results);
             $("#googleResults").empty();
-            //returns up to 5 restaurnts potentially fewer 
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length && i < 5; i++) {
                     createMarker(results[i]);
@@ -193,8 +226,8 @@ $("#googlePlacesButton").click(function(){
       }
     });
 });
-//these are the signin-out authentication buttons for the modals (for one modal, link it to the ones on the menu)
-//double check from the slack convo 
+
+//event for clicking the sign-up link on the nav menu-- for now the a hrefs are # placeholders, call modal?
 $("#signUpButton").click(function(){
     var email = $("#emailInput").val().trim();
     var password = $("#passwordInput").val().trim();
@@ -206,7 +239,7 @@ $("#signUpButton").click(function(){
     });
 
 });
-
+//aka Log out on the nav menu
 $("#signOut").click(function(){
     firebase.auth().signOut().then(function() {
     // Sign-out successful.
@@ -292,47 +325,55 @@ $("#signInGoogle").click(function(){
     });
 });
 
-$("#cityInputForm").submit(function(){
-    event.preventDefault();
-    userCity = $("#cityInput").val().trim();
-    printUserCity();
+ 
 
-    if (firebaseUser != undefined) {
-        database.ref("users/" + firebaseUser.uid).set({
-            city: userCity
-        });
-    }
-});
-
-$("#weatherButton").click(function(){
-    //api.openweathermap.org/data/2.5/weather?q={city name}
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userCity +
-    "&units=imperial&APPID=1f696d92481f8b09a45310a970c0b486";
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).done(function(data){
-        console.log(data);
-        console.log(data.main.temp);
-        console.log(data.weather[0].description);
-        //http://openweathermap.org/img/w/10d.png
-        var weatherHtml = `The weather is ${data.main.temp} F <img src='http://openweathermap.org/img/w/${data.weather[0].icon}.png' alt='${data.weather[0].description}'>`;
-        $("#weather").html(weatherHtml);
-    });
-});
-
-$("#meetUpButton").click(function(){
-    // api key for meetup 67126c723a751b543f227367b1f5954
-    var queryURL = "https://api.meetup.com/2/events?key=67126c723a751b543f227367b1f5954&group_urlname=ny-tech&sign=true";
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-         }).done(function(data){
-             console.log(data);
-         });
-});
+//updated weather api function 
+function weatherQuery()
+{
+   var queryURL = `https://api.apixu.com/v1/current.json?key=fabc133684694665aae31230171407&q=${encodeURIComponent(userCity)}`;
+   $.ajax({
+       url: queryURL
+   })
+   .done(function(data){
+       //console.log(data);
+       $("#preferredWeather").html(`${data.current.temp_f} Degrees ${data.current.condition.text}`);
+   })
+   .fail(function(jqXHR, textStatus)
+   {
+       console.log(textStatus);
+   })
+}
 
 
+//this API only uses http, it will be BLOCKED by chrome 
+// $("#weatherButton").click(function(){
+//     event.preventDefault();
+//     //api.openweathermap.org/data/2.5/weather?q={city name}
+//     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userCity +
+//     "&units=imperial&APPID=1f696d92481f8b09a45310a970c0b486";
+//     $.ajax({
+//         url: queryURL,
+//         method: "GET"
+//     }).done(function(data){
+//         console.log(data);
+//         console.log(data.main.temp);
+//         console.log(data.weather[0].description);
+//         //http://openweathermap.org/img/w/10d.png
+//         var weatherHtml = `The weather is ${data.main.temp} F <img src='http://openweathermap.org/img/w/${data.weather[0].icon}.png' alt='${data.weather[0].description}'>`;
+//         $("#weather").html(weatherHtml);
+//     });
+// });
+
+// $("#meetUpButton").click(function(){
+//     // api key for meetup 67126c723a751b543f227367b1f5954
+//     var queryURL = "https://api.meetup.com/2/events?key=67126c723a751b543f227367b1f5954&group_urlname=ny-tech&sign=true";
+//     $.ajax({
+//         url: queryURL,
+//         method: "GET"
+//          }).done(function(data){
+//              console.log(data);
+//          });
+// });
 
 
 // $(".dateNightButton").click(function(){
@@ -369,34 +410,60 @@ $("#meetUpButton").click(function(){
 //   }
 // });
 
-$("#yelpButton").click(function(){
-    // Client ID
-// ImyIU6DHaqlzfq2Y-v7UPw
-// Client Secret
-// SOC31MI8AVBkGCnk6At0ScKs8qxdhl3CWtDfX7BF1OoTgSPBUbGONwhNb1i8Ozy1
+// $("#yelpButton").click(function(){
+//     // Client ID
+// // ImyIU6DHaqlzfq2Y-v7UPw
+// // Client Secret
+// // SOC31MI8AVBkGCnk6At0ScKs8qxdhl3CWtDfX7BF1OoTgSPBUbGONwhNb1i8Ozy1
 
-// $ curl -d "grant_type=client_credentials&client_id=ImyIU6DHaqlzfq2Y-v7UPw&client_secret=SOC31MI8AVBkGCnk6At0ScKs8qxdhl3CWtDfX7BF1OoTgSPBUbGONwhNb1i8Ozy1" -X POST https://api.yelp.com/oauth2/token
-// {"access_token": "8vBb2_Y61wo65MJ4u5jFEo489N4-aL6GKPYYhB8qZ59Sip_9ppmymC-Bo-j5maeBUrgT0Q78u4jTDz3LKxpm2oVq1QWOwwdfKsne69qVPidZh2Nu3dPBGRIhwylkWXYx", "expires_in": 15551999, "token_type": "Bearer"}
-    //  var token = "8vBb2_Y61wo65MJ4u5jFEo489N4-aL6GKPYYhB8qZ59Sip_9ppmymC-Bo-j5maeBUrgT0Q78u4jTDz3LKxpm2oVq1QWOwwdfKsne69qVPidZh2Nu3dPBGRIhwylkWXYx";
-    //  var queryURL = "https://api.yelp.com/v3/businesses/search/?term=food&location=Raleigh"
-    //  $.ajax({
-    //     url: queryURL,
-    //     headers: {"Authorization": "Bearer " + token}
-    // })           
-    // .done(function (data) {
-    //   console.log(data);
-    // })
-    // .fail(function (jqXHR, textStatus) {
-    //   alert("error: " + textStatus);
-    // });
+// // $ curl -d "grant_type=client_credentials&client_id=ImyIU6DHaqlzfq2Y-v7UPw&client_secret=SOC31MI8AVBkGCnk6At0ScKs8qxdhl3CWtDfX7BF1OoTgSPBUbGONwhNb1i8Ozy1" -X POST https://api.yelp.com/oauth2/token
+// // {"access_token": "8vBb2_Y61wo65MJ4u5jFEo489N4-aL6GKPYYhB8qZ59Sip_9ppmymC-Bo-j5maeBUrgT0Q78u4jTDz3LKxpm2oVq1QWOwwdfKsne69qVPidZh2Nu3dPBGRIhwylkWXYx", "expires_in": 15551999, "token_type": "Bearer"}
+//     //  var token = "8vBb2_Y61wo65MJ4u5jFEo489N4-aL6GKPYYhB8qZ59Sip_9ppmymC-Bo-j5maeBUrgT0Q78u4jTDz3LKxpm2oVq1QWOwwdfKsne69qVPidZh2Nu3dPBGRIhwylkWXYx";
+//     //  var queryURL = "https://api.yelp.com/v3/businesses/search/?term=food&location=Raleigh"
+//     //  $.ajax({
+//     //     url: queryURL,
+//     //     headers: {"Authorization": "Bearer " + token}
+//     // })           
+//     // .done(function (data) {
+//     //   console.log(data);
+//     // })
+//     // .fail(function (jqXHR, textStatus) {
+//     //   alert("error: " + textStatus);
+//     // });
 
-    // $.ajax({
-    // url      : 'http://api.yelp.com/business_review_search',
-    // dataType : 'jsonp',
-    // data     : {term : 'restaurant', lat : xxx, long : xxx}, // callback is not necessary
-    // success  : function(data) {
-    //     // data is a normal response shown on yelp's API page
-    //     console.log(data)
-    // }
-    // });
-});
+//     // $.ajax({
+//     // url      : 'http://api.yelp.com/business_review_search',
+//     // dataType : 'jsonp',
+//     // data     : {term : 'restaurant', lat : xxx, long : xxx}, // callback is not necessary
+//     // success  : function(data) {
+//     //     // data is a normal response shown on yelp's API page
+//     //     console.log(data)
+//     // }
+//     // });
+// });
+
+//////////////////////TASKS//////////////////////
+// Attach events to the login buttons/out buttons (,ake sure the ids match all of them)
+// hamburger button for the nav bar?
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
