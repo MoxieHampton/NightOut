@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 
 <head>
     <title>Night Out - Main Page</title>
@@ -14,8 +13,11 @@
 </head>
 
 <body>
+<!-- **7/16/2017** infopage.html and resultspage.html were removed to combine into one page -->
+
 
     <!--carousel-->
+    <div id="introPage">
     <div class="row">
         <div class="carousel carousel-slider">
             <a class="carousel-item" href="#three!"><img src="assets/images/bk-2.jpg"></a>
@@ -32,6 +34,196 @@
             <button class="waves-effect waves-light btn-large grey" id="girlsNight"><a href="infopage.html">Create Your Experience</button></a>
         </div>
     </div>
+    </div>
+
+        <!--   Icon Section   -->
+    <div id="howItWorksWrapper">
+        <!--information for the navigation bar-->
+        <nav class="grey darken-1" role="navigation">
+            <div class="container">
+                <div class="nav-wrapper"><img id="logo-container" src="assets/images/bk-1-Recovered.jpg" class="brand-logo" alt="bg">
+                    <ul class="right">
+                        <li class="loginButtonClass"><a class="btn modal-trigger" data-target="signInModal" href="#" id="logIn">Login</a></li>
+                        <li class="logoutButtonClass"><a class="logOut">Log Out</a></li>
+                        <li class="signUpButtonClass"><a data-target="signUpModal">SIGN UP</a></li>
+                    </ul>
+
+                    <ul id="nav-mobile" class="side-nav">
+                        <li class="loginButtonClass"><a class="btn modal-trigger" data-target="modal1" href="#" id="logInMobile">Login</a></li>
+                        <li class="logoutButtonClass"><a class="logOut">Log out</a></li>
+                        <li class="signUpButtonClass"><a data-target="signUpModal">Sign Up</a></li>
+                    </ul>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                </div>
+            </div>
+        </nav>
+
+    <div id="howItWorks" class="background">
+        <div class="row">
+            <br><br>
+            <h4 class="header center white-text">How Night Out Works</h4>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center grey-text"><i class="large material-icons">stars</i></h2>
+                    <h5 class="white-text center">Choose an Experience</h5>
+
+                    <p class="white-text light center">Discover your next live experience! <br> Have a memorable event that is Snapchat worthy.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center white-text"><i class="large material-icons">location_on</i></h2>
+                    <h5 class="white-text center ">Search Your City</h5>
+
+                    <p class="white-text light center">Choose the location of your next night out event. <br> Need directions? No problem! Send directions to your phone through Google Maps.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center grey-text"><i class="large material-icons">trending_up</i></h2>
+                    <h5 class="white-text center">Find Trending Spots</h5>
+
+                    <p class="white-text light center">What's a night out without great food &amp; drinks? <br> Check out the top 5 spots to mix and mingle, or just catch up with friends.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <!-- Modal Trigger -->
+        <div class="row center">
+            <div class="buttonContainer">
+                <button data-target="modalLocation" class="btn modal-trigger waves-effect waves-light btn-large grey" id="girlsNight">Girls Night</button>
+                <button data-target="modalLocation" class="btn modal-trigger waves-effect waves-light btn-large grey" id="guysNight">Guys Night</button>
+                <button data-target="modalLocation" class="btn modal-trigger waves-effect waves-light btn-large grey" id="dateNight">Date Night</button>
+                <button data-target="modalLocation" class="btn modal-trigger waves-effect waves-light btn-large grey" id="randomNight">Random Night</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+        <div id="results" class="section black">
+            <div id="holder" class="row container">
+
+                <!--displays the city user inputs GOES HERE-->
+                <div id="city">
+                    <p id="preferredCity"></p>
+                </div>
+
+                <!--displays Weather in city user inputs GOES HERE-->
+                <div id="weather">
+                    <p id="preferredWeather"></p>
+                </div>
+
+                <!--displays google Maps user inputs GOES HERE-->
+                <div id="googleMaps"></div>
+                <p class=" center white-text text-darken-3 lighten-3" style="font-size: 30px; text-shadow: 2px 2px #1d1c1c;">SELECT THREE EVENTS FOR TONIGHT</p>
+                <!--EVENTS GO HERE-->
+                <div class="eventContainer">
+                    <div id="googleResults">
+                    </div>
+                    <div id="fourSquareDrinks">
+                    </div>
+                    <div id="fourSquareTrending">
+                    </div>
+                    <div id="fourSquareSights">
+                    </div>
+                    <div id="fourSquareCoffee">
+                    </div>
+                    <div id="fourSquareArts">
+                    </div>
+                    <div id="eventBriteResults">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal Structure -->
+        <div id="modalLocation" class="modal modal-fixed-footer">
+            <img id="modalLocationBackground" src="assets/images/locationImage.jpeg" alt="bg">
+            <div class="modal-content">
+                <h4 id="enterCity">Enter Your City</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row modal-form-row">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input value="" id="userCity" type="text" class="validate">
+                                    <label class="active" for="userCity">Example: Raleigh, NC</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--    <div class="modal-footer center"> -->
+                <a id="letsGoButton" class="modal-action waves-effect waves-red btn-flat">Let's Go!</a>
+                <!--  </div> -->
+            </div>
+            <br><br>
+        </div>
+
+        <div id="signInModal" class="modal modal-fixed-footer center authModal">
+            <div class="content">
+                <div class="title white-text" style="font-size: 60px;">Sign In</div>
+                <input id="modalEmail" type="text" placeholder="E-mail" />
+                <input id="modalPass" type="password" placeholder="Password" />
+                <br>
+                <div class="social"> <span id="signInErrorText" class="white-text" style="font-size: 20px; text-shadow: 2px 2px #000;"></span></div>
+
+                <button id="modalSignIn">Sign In</button>
+                <br>
+                <div class="social"> <span class="white-text" style="font-size: 30px; text-shadow: 2px 2px #000;">Or Sign In With Social Media</span></div>
+
+                <div class="buttons">
+                    <button id="modalFace" class="signInFaceBook facebook"><i class="fa fa-facebook"></i>Facebook</button>
+                    <button id="modalTwit" class="signInTwitter twitter"><i class="fa fa-twitter"></i>Twitter</button>
+                    <button id="modalGoo" class="signInGoogle google"><i class="fa fa-google-plus"></i>Google</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="signUpModal" class="modal modal-fixed-footer center authModal">
+            <div class="content">
+                <div class="title white-text" style="font-size: 60px;">Create Account</div>
+                <input id="modalEmailSignUp" type="text" placeholder="E-mail" />
+                <input id="modalPassSignUp" type="password" placeholder="Password" />
+                <br>
+                <div class="social"> <span id="signUpErrorText" class="white-text" style="font-size: 20px; text-shadow: 2px 2px #000;"></span></div>
+                <button id="modalCreate">Create Account</button>
+                <br>
+                <div class="social"> <span class="white-text" style="font-size: 30px; text-shadow: 2px 2px #000;">Or Sign Up With Social Media</span></div>
+
+                <div class="buttons">
+                    <button id="modalFaceSignUp" class="signInFaceBook facebook"><i class="fa fa-facebook"></i>Facebook</button>
+                    <button id="modalTwitSignUp" class="signInTwitter twitter"><i class="fa fa-twitter"></i>Twitter</button>
+                    <button id="modalGooSignUp" class="signInGoogle google"><i class="fa fa-google-plus"></i>Google</button>
+                </div>
+            </div>
+        </div>
+    
+    <div id="doneModal" class="modal modal-fixed-footer center">
+        <div class="content">
+        <!--<img id="clipboardImage" src="assets/images/clipboard.png"> -->
+        <div class="clipboardContainer center-align">
+            <div id="results0"></div>
+            <div id="results1"></div>
+            <div id="results2"></div>
+        </div>
+
+        <div id="lastContainer" class="center">
+            <button id="close">CLOSE</button>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLrZMmutAL6ueD9VpTwaZ9aH91pbNamDU&libraries=places" async defer></script>
+ 
 
     <!--Firebase link-->
     <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
